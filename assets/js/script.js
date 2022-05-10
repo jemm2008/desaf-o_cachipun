@@ -9,7 +9,14 @@ let saludo = () => {
 //
 //2.- Función número de Jugadas //
 let num_jugadas = () => {
-    let jugadas = parseInt(prompt (`Introduzca el número de veces que desee Jugar: `))
+    let selector = true
+    let jugadas = 0
+    do {
+    jugadas = parseInt(prompt (`Introduzca el número de veces que desee Jugar, (máx 19 veces): `))
+    if (jugadas >= 1 && jugadas <= 19) {
+        selector = false
+    }
+    } while (selector)
     return jugadas
 }
 //
